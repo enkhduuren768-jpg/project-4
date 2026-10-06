@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-image:url(./city.webp) center / cover no-repeat;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-image: url(./city.webp);
+    filter: blur(8px);
+}
+  .card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 930px;
+    min-height: 690px;
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  }
+  .card-image {
+    flex: 1.18;
+    background:
+      url(./city.webp) center / cover no-repeat,
+      linear-gradient(180deg, #2f5d9e 0%, #e9eaf2 40%, #c9a15e 100%);
+  }
+  .card-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 42px;
+  }
+  .card-form h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f2e2b;
+  }
+  .subtitle {
+    margin-top: 4px;
+    margin-bottom: 26px;
+    font-size: 17px;
+    color: #444;
+  }
+  label {
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: #f1f1f1;
+    font-size: 15px;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s,0.2s;
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus {
+    border-color: #c9a227;
+    background: #fff;
+  }
+  .privacy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 15px;
+    color: #444;
+  }
+  .privacy a {
+    color: #c9a227;
+    text-decoration: none;
+  }
+  .privacy a:hover {
+    text-decoration: underline;
+  }
+  .privacy input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #c9a227;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #000;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s, transform 0.1s;
+  }
+  button[type="submit"]:hover {
+    background: #222;
+  }
+  button[type="submit"]:active {
+    transform: scale(0.98);
+  }
+  @media (max-width: 760px) {
+    .card {
+      flex-direction: column;
+      min-height: auto;
+    }
+    .card-image {
+      flex: none;
+      height: 220px;
+    }
+    .card-form {
+      padding: 30px 24px;
+    }
+  }
